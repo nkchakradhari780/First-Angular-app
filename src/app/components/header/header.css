@@ -1,0 +1,12 @@
+.hello{
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
