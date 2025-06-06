@@ -1,9 +1,9 @@
 <div class="text-align: center">
-  <app-header />
-  
-  <app-interpolation />
-
-  <app-class-binding />
+  <div [ngClass]="flex">
+    <app-header />
+    <app-interpolation />
+    <app-class-binding />
+  </div>
 </div>
 
 <router-outlet />

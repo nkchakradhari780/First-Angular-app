@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
 })
 export class ClassBinding {
   protected title = 'Class Binding Example';
-  currentClass = 'text-blue'
+  currentClass = 'text-blue bg-yellow';
+  isActive = true;
+  isHighlited = true;
+  isError = false;
 }

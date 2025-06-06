@@ -1,1 +1,7 @@
 <div [ngClass] = "currentClass"> Dynamic Class</div>
+
+<div [class.active]="isActive"> Toggle class</div>
+
+<div [ngClass]=" { 'active': isActive, 'highlight': isHighlited }"> Multiple classes</div>
+
+<div [class]="isError? 'error': 'success'"> Conditional class</div>
