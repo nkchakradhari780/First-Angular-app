@@ -3,6 +3,10 @@
     
     <div [style.width.px] = "100"> Fixed width of 100px</div>
     
-    <div [style.width.px] = "fontSize * 10"> Dynamic width {{fontSize * 10}}px</div>
+    <div [style.width.px] = "fontSize * 10 "> Dynamic width {{fontSize * 10}}px</div>
+
+    <h2 [style.color] = "hasError ? 'red': 'green'"> Style Binding </h2>
+
+    <div [ngStyle]="{'background-color': bgColor, 'font-size.px': fontSize}">Styled Dynamically</div>
 </div>
 
