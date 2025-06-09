@@ -8,10 +8,11 @@ import { StyleBinding } from './components/style-binding/style-binding';
 import { EventBinding } from './components/event-binding/event-binding';
 import { TwoWayBinding } from './components/two-way-binding/two-way-binding';
 import { DirectiveImplementation } from './components/directive-implementation/directive-implementation';
+import { SignupForm } from './components/signup-form/signup-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding, TwoWayBinding,DirectiveImplementation],
+  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding, TwoWayBinding,DirectiveImplementation,SignupForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,32 @@
+<p>signup-form works!</p>
+
+<div class="container">
+  <h2>Sign Up</h2>
+  <form>
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input [(ngModel)]="fullName" type="text" id="fullname" name="fullname" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input [(ngModel)]="email" type="email" id="email" name="email" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input [(ngModel)]="password" type="password" id="password" name="password" required />
+    </div>
+    <div class="form-group">
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        [(ngModel)]="confirm_pass"
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="submitButton()" >Sign Up</button>
+    </div>
+  </form>
+</div>
