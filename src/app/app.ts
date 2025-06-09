@@ -4,10 +4,11 @@ import { Header } from './components/header/header';
 import { Interpolation } from './components/interpolation/interpolation';
 import { ClassBinding } from './components/class-binding/class-binding';
 import { CommonModule } from '@angular/common';
+import { StyleBinding } from './components/style-binding/style-binding';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Interpolation,ClassBinding,CommonModule],
+  imports: [RouterOutlet,Header,Interpolation,ClassBinding,CommonModule,StyleBinding],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
