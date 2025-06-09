@@ -5,10 +5,11 @@ import { Interpolation } from './components/interpolation/interpolation';
 import { ClassBinding } from './components/class-binding/class-binding';
 import { CommonModule } from '@angular/common';
 import { StyleBinding } from './components/style-binding/style-binding';
+import { EventBinding } from './components/event-binding/event-binding';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Interpolation,ClassBinding,CommonModule,StyleBinding],
+  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

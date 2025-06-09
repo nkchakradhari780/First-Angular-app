@@ -1,0 +1,37 @@
+<p [style.color]="'blue'" [style.fontWeight]="'bold'">{{click}}</p>
+
+<input 
+    [style.margin.px]="100"
+    [style.padding.px]="10"
+    [style.border]="'2px solid #007bff'"
+    [style.borderRadius.px]="5"
+    (input)="onInput($event)"
+/>
+
+<button  
+    type="button"
+    [ngStyle]="{
+        'background-color': '#007bff',
+        'color': 'white',
+        'padding.px': 10,
+        'border': 'none',
+        'border-radius.px': 5,
+        'margin-right.px': 10
+    }"
+    (click)="clickButton()"
+>
+    Click Me
+</button>
+
+<button 
+    [ngStyle]="{
+        'background-color': '#28a745',
+        'color': 'white',
+        'padding.px': 10,
+        'border': 'none',
+        'border-radius.px': 5
+    }"
+    (click)="addToCart(product)"
+>
+    Add
+</button>
