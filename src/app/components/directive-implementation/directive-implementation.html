@@ -1,0 +1,6 @@
+<p appHighlightDirective>This paragraph will be highlighted.</p>
+
+<div *ngIf="isLoggedIn; else loginBlock">Welcome, user!</div>
+<ng-template #loginBlock>
+  <p>Please log in.</p>
+</ng-template>
