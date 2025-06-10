@@ -11,12 +11,27 @@ import { DirectiveImplementation } from './components/directive-implementation/d
 import { SignupForm } from './components/signup-form/signup-form';
 import { ComponentInheritance } from "./components/component-inheritance/component-inheritance";
 import { FormsModule } from '@angular/forms';
+import { PipeComponents } from './components/pipe-components/pipe-components';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding, TwoWayBinding, DirectiveImplementation, SignupForm, ComponentInheritance,FormsModule],
+  imports: [
+    RouterOutlet,
+    Header,
+    Interpolation,
+    ClassBinding,
+    CommonModule,
+    StyleBinding,
+    EventBinding,
+    TwoWayBinding,
+    DirectiveImplementation,
+    SignupForm,
+    ComponentInheritance,
+    FormsModule,
+    PipeComponents,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected title = 'first-angular-app';
