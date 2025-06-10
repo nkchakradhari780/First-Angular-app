@@ -9,10 +9,12 @@ import { EventBinding } from './components/event-binding/event-binding';
 import { TwoWayBinding } from './components/two-way-binding/two-way-binding';
 import { DirectiveImplementation } from './components/directive-implementation/directive-implementation';
 import { SignupForm } from './components/signup-form/signup-form';
+import { ComponentInheritance } from "./components/component-inheritance/component-inheritance";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding, TwoWayBinding,DirectiveImplementation,SignupForm],
+  imports: [RouterOutlet, Header, Interpolation, ClassBinding, CommonModule, StyleBinding, EventBinding, TwoWayBinding, DirectiveImplementation, SignupForm, ComponentInheritance,FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -20,5 +22,11 @@ export class App {
   protected title = 'first-angular-app';
   protected name = "Nitin Chakradhari";
   flex = 'flex-box bg-color';
-  
+  message = "parent to child communication";
+
+  childmsg: any;
+  receiveMessage($event: any) {
+    this.childmsg = $event;
+    console.log("Message received from child:", $event);
+  }
 }

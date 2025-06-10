@@ -4,3 +4,16 @@
 <ng-template #loginBlock>
   <p>Please log in.</p>
 </ng-template>
+
+<input [(ngModel)]="selectedColor" placeholder="Enter a color" />
+
+<div [ngSwitch] = 'selectedColor'>
+  <p *ngSwitchCase="'red'">Red Color</p>
+  <p *ngSwitchCase="'blue'">Blue Color</p>
+  <p *ngSwitchCase="'green'">Green Color</p>
+  <p *ngSwitchDefault>Default Color</p>
+</div>
+
+<ul>
+  <li *ngFor="let fruit of fruits; let i = index">{{ i + 1 }}. {{ fruit }}</li>
+</ul>

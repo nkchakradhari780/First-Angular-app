@@ -9,6 +9,11 @@
   <app-two-way-binding />
   <app-directive-implementation />
   <app-signup-form />
+
+  <input [(ngModel)]="message" />
+
+  <app-component-inheritance [message]="message" (messageEvent)="receiveMessage($event)"/>
+
 </div>
 
 <router-outlet />
