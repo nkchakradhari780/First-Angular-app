@@ -12,6 +12,10 @@ import { SignupForm } from './components/signup-form/signup-form';
 import { ComponentInheritance } from "./components/component-inheritance/component-inheritance";
 import { FormsModule } from '@angular/forms';
 import { PipeComponents } from './components/pipe-components/pipe-components';
+import { ServiceImplementation } from './components/service-implementation/service-implementation';
+import { MyService } from './services/my-service';
+import { EmployeeList } from './components/employee-list/employee-list';
+import { EmployeeDetails } from './components/employee-details/employee-details';
 
 @Component({
   selector: 'app-root',
@@ -29,9 +33,13 @@ import { PipeComponents } from './components/pipe-components/pipe-components';
     ComponentInheritance,
     FormsModule,
     PipeComponents,
+    ServiceImplementation,
+    EmployeeList,
+    EmployeeDetails
   ],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrls: ['./app.css'],
+  providers: [MyService]
 })
 export class App {
   protected title = 'first-angular-app';
@@ -44,4 +52,6 @@ export class App {
     this.childmsg = $event;
     console.log("Message received from child:", $event);
   }
+
+ 
 }

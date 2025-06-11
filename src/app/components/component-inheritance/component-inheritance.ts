@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Component, DoCheck, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-component-inheritance',
@@ -8,7 +8,15 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
   styleUrl: './component-inheritance.css'
 })
 
-export class ComponentInheritance implements OnChanges,OnInit {
+export class ComponentInheritance implements OnChanges,OnInit,AfterViewInit{
+
+  @ViewChild('inputRef') inputElement!: ElementRef;
+  
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit called');
+    this.inputElement.nativeElement.focus();
+  }
+
   users: any[] = []
 
   ngOnInit(): void {
