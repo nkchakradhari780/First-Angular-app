@@ -10,13 +10,15 @@ import { MyService } from '../../services/my-service';
 })
 
 export class ServiceImplementation {
-  msg:any;
+  msg:string = 'hello from component';
 
   constructor(private myService: MyService){
 
   }
 
+  
   ngOnInit(){
+    this.myService.msgFromComp = this.msg;
     this.msg = this.myService.getMessage();
   }
 }

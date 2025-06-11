@@ -7,6 +7,8 @@ export class MyService {
 
   constructor() { }
 
+  public msgFromComp: string = '';
+
   getMessage(): string {
     return 'Hello from MyService!'
   }
