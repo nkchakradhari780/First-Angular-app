@@ -10,11 +10,13 @@
   <app-directive-implementation />
   <app-signup-form />
 
-  <input [(ngModel)]="message" />
+  <input type="text" [(ngModel)]="message" />
 
   <app-component-inheritance [message]="message" (messageEvent)="receiveMessage($event)"/>
 
   <app-pipe-components />
+
+
 
 </div>
 

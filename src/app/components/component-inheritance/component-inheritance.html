@@ -3,3 +3,9 @@
 <p>Parent -> Child: {{ message }}</p>
 
 <button (click)="sendMessage()">Send Message</button>
+
+<ul>
+    <li *ngFor="let user of users">
+        {{user.name}} ({{user.email}})
+    </li>
+</ul>
