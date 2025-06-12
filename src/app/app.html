@@ -1,33 +1,7 @@
-<div class="text-align: center">
-  <div [ngClass]="flex">
-    <app-header />
-    <app-interpolation />
-    <app-class-binding />
-  </div>
-  <app-style-binding />
-  <app-event-binding />
-  <app-two-way-binding />
-  <app-directive-implementation />
-  <app-signup-form />
+<ul>
+  <li> <a routerLink="/employeesList"> employees List</a></li>
+  <li> <a routerLink="/employeeDetails"> employees Details</a></li>
+  <li> <a routerLink="/signupForm">Signup Form</a></li>
 
-  <input type="text" [(ngModel)]="message" />
-
-  <app-component-inheritance [message]="message" (messageEvent)="receiveMessage($event)"/>
-
-  <app-pipe-components />
-
-  <app-service-implementation />
-
-  <app-employee-details />
-  <app-employee-list />
-
-  <div class="card m-3 p-3 shadow">
-    <h5 class="card-title">
-      Hello Bootstrap in Angular 20
-    </h5>
-  </div>
-
-
-</div>
-
+</ul>
 <router-outlet />

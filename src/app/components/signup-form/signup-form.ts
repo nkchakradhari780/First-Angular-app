@@ -21,4 +21,10 @@ export class SignupForm {
     console.log("Confirm Pass: " + this.confirm_pass)
   }
 
+  signupModel: any = { };
+
+  onSubmit() {
+    alert('Success!! :-) \n\n' + JSON.stringify(this.signupModel))
+  }
+
 }

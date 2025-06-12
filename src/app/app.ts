@@ -1,5 +1,5 @@
 import { Component, twoWayBinding } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { Interpolation } from './components/interpolation/interpolation';
 import { ClassBinding } from './components/class-binding/class-binding';
@@ -35,7 +35,8 @@ import { EmployeeDetails } from './components/employee-details/employee-details'
     PipeComponents,
     ServiceImplementation,
     EmployeeList,
-    EmployeeDetails
+    EmployeeDetails,
+    RouterLink,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.css'],

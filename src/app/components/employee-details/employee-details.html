@@ -1,7 +1,8 @@
 <p>employee-details works!</p>
 
-<ul>
-    <li *ngFor="let employe of employees">
+<ul  *ngFor="let employe of employees">
+    <li (click)="onSelect(employe)">
+        
         {{employe.Name}}
     </li>
 </ul>
