@@ -1,0 +1,64 @@
+<div class="container">
+  <h2 class="mt-4">Add Product Form</h2>
+  <form
+    #addProductForm="ngForm"
+    (ngSubmit)="addProductForm.form.valid && onSubmit()"
+    novalidate
+  >
+    <div class="mb-3">
+      <label for="productTitle" class="form-label">Title</label>
+      <input
+        [(ngModel)]="addProductModel.title"
+        type="text"
+        class="form-control"
+        id="title"
+        #titel="ngModel"
+         [ngClass]="{'is-invalid': addProductModel.submitted && titel.invalid}"
+
+        name="title"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="productPrice" class="form-label">Price</label>
+      <input
+        type="number"
+        [(ngModel)]="addProductModel.price"
+        class="form-control"
+        id="price"
+        #price = "ngModel"
+        name="price"
+         [ngClass]="{'is-invalid': addProductModel.submitted && price.invalid}"
+
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="productDescription" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        [(ngModel)]="addProductModel.description"
+        id="description"
+        name="description"
+        rows="3"
+        #description="ngModel"
+        required
+         [ngClass]="{'is-invalid': addProductModel.submitted && description.invalid}"
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="productCategory" class="form-label">Category</label>
+      <input
+        type="text"
+        [(ngModel)]="addProductModel.category"
+        class="form-control"
+        id="category"
+        name="category"
+        [ngClass]="{'is-invalid': addProductModel.submitted && category.invalid}"
+        required
+        #category="ngModel"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
